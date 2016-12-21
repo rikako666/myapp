@@ -1,0 +1,14 @@
+<% provide(:title, 'All users') %>
+<h1>Member</h1>
+
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.name, user %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Project', new_project_path %></br>
+
+<p class=back_button><%= link_to 'Back', projects_path %></p>
